@@ -1,2 +1,2 @@
 # dom-hooks
-Some random hooks for UI work around various DOM API features.
+Random React hooks for working with various DOM API mechanics, lazily unpackaged at 4 AM sleeping
