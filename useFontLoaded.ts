@@ -4,10 +4,11 @@ export const useFontLoaded = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useLayoutEffect(() => {
-    (async () => {
-      const ready = await document.fonts.ready;
-      setIsLoaded(ready);
-    })();
+    if (document?.fonts) {
+      document.fonts.ready.then(() => {
+        setIsLoaded(true);
+      });
+    }
   }, []);
 
   return isLoaded;
